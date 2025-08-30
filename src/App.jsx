@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-// by declearning the color and you set the colour dartkness or lightness according to you just by gicing -a number (500) 
+  const [count, setCount] = useState(0);
+
   return (
     <>
-     <div className='bg-black-600 flex justify-between ' >
-      <p className='bg-green-200 '> this is first child of parent div</p>
-      <p className='bg-purple-400 ' > this is secounf child of parent div</p>
-     </div>
+      <div className="bg-black-600 grid grid-cols-12 ">
+        <div className=" bg-amber-200 col-span-7">Child 1</div>
+
+        <div className="bg-green-200 col-span-10">Chils 3</div>
+
+        <div className="bg-blue-200 col-span-3">Child 4</div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
